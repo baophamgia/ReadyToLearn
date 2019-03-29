@@ -1,0 +1,82 @@
+﻿@model ReadyToLearn.Models.SACH
+
+@{
+    ViewBag.Title = "Chitietsach";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h3>THÔNG TIN CHI TIẾT SÁCH</h3>
+
+<div>
+    
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Tên sách:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tensach)
+        </dd>
+
+        <dt>
+           Giá bán:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Giaban)
+        </dd>
+
+        <dt>
+           Mô tả:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Mota)
+        </dd>
+
+        <dt>
+           Ảnh bìa:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Anhbia)
+        </dd>
+
+        <dt>
+           Ngày cập nhật:
+
+        <dd>
+            @Html.DisplayFor(model => model.Ngaycapnhat)
+        </dd>
+
+        <dt>
+           Số lượng tồn:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Soluongton)
+        </dd>
+
+        <dt>
+            Chủ đề:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaCD)
+        </dd>
+
+        <dt>
+           Nhà xuất bản:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaNXB)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("ĐIỀU CHỈNH", "Suasach", new { id = Model.Masach }) |
+    @Html.ActionLink("TRỞ VỀ", "Sach")
+</p>
